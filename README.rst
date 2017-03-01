@@ -36,12 +36,12 @@ need to load the dependencies, too, by passing the ``modes`` parameter:
 
 ::
 
-    html = forms.Charfield(widget=CodeMirrorEditor(modes=['css', 'xml', 'javascript', 'htmlmixed'],
+    html = forms.CharField(widget=CodeMirrorEditor(modes=['css', 'xml', 'javascript', 'htmlmixed'],
                 options={'mode': 'htmlmixed'}))
 
 If you want to customize the Javascript used to initialize the CodeMirror editor, use ``script_template``::
 
-    foo = forms.Charfield(widget=CodeMirrorEditor(options={'mode': 'xml'}, 
+    foo = forms.CharField(widget=CodeMirrorEditor(options={'mode': 'xml'}, 
                 script_template='some/template.html'))
 
 You can base your script template on the included template ``codemirror_script.html``.
